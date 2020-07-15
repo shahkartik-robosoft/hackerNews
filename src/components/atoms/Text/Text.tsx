@@ -1,42 +1,17 @@
 import * as React from "react";
-
 import "./Text.scss";
 
-export type textSizeType = "lg" | "xl";
-export type textColorType = "white" | "black" | "gray";
-export type textWeightType = "bold" | "normal";
-
-export interface TextProps {
+export interface ITextProps {
   textLabel: string;
-  fontSize?: textSizeType;
-  color?: textColorType;
-  className?: string;
-  weight?: textWeightType;
   style?: {};
+  className?: string;
   onClick?: (e: any) => void;
 }
 
-const Text = ({
-  textLabel,
-  className,
-  fontSize,
-  color,
-  weight,
-  style,
-                onClick,
-}: TextProps) => {
-  let textSize = `text-wrapper--text-${fontSize ? fontSize : "base"}`;
-  let textColor = `text-wrapper--text-${color ? color : "white"}`;
-  let textWeight = `text-wrapper--text-${weight ? weight : "normal"}`;
+const Text: React.FC<ITextProps> = props => {
 
   return (
-    <p
-      style={style}
-      className={`text-wrapper ${textSize} ${textColor} ${textWeight} ${className}`}
-      onClick={onClick}
-    >
-      {textLabel}
-    </p>
+      <p style={props.style} className={`${props.className}`}>{props.textLabel}</p>
   );
 };
 

@@ -1,0 +1,22 @@
+@import "../../../styles/colors";
+
+.hackerNewItem {
+  display: flex;
+
+  ol li {
+    margin: 10px 0;
+    ::before {
+      color: $subtitle-font;
+    }
+  }
+}
+
+.hackerNewItem_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hackerNewItem_item--title {
+  display: flex;
+  align-items: center;
+}

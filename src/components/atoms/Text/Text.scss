@@ -1,40 +1,32 @@
-.text-wrapper {
+@import "../../../styles/colors";
+
+.text {
+  font-size: 16px;
   margin: 0;
-  line-height: 1.4;
-  color: #fff;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
+  &:hover {
+    cursor: pointer;
+  }
+  &.text_header {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &.subtitle {
+    color: $subtitle-font;
+    font-size: 12px;
+  }
 }
 
-.text-wrapper--text-base {
-  font-size: 16px;
-}
-
-.text-wrapper--text-lg {
-  font-size: 16px;
-}
-
-.text-wrapper--text-xl {
-  font-size: 20px;
-}
-
-.text-wrapper--text-white {
-  color: #fff;
-}
-
-.text-wrapper--text-gray {
-  color: #5e6c84;
-}
-
-.text-wrapper--text-black {
-  color: #172b4d;
-}
-
-.text-wrapper--text-normal {
-  font-weight: 400;
-}
-
-.text-wrapper--text-bold {
-  font-weight: 600;
+.text_subtitle {
+  color: $subtitle-font;
+  padding: 0;
+  margin: 0 0 0 2px;
+  font-size: 12px;
+  &.list {
+    font-size: 16px;
+  }
+  &.pointerOnHover {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

@@ -1,0 +1,10 @@
+@import "../../../styles/colors";
+
+.link {
+  font-size: 12px;
+  color: $subtitle-font;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
