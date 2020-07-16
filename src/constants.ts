@@ -7,6 +7,8 @@ export enum PAGES {
     ASK= 'ask',
     SHOW= 'show',
     JOBS= 'jobs',
+    GUIDELINE= 'Guideline',
+    FAQ= 'faq',
 }
 
 export const MAP_URL: any = {
@@ -15,4 +17,6 @@ export const MAP_URL: any = {
     ask: 'ask',
     show: 'show',
     jobs: 'jobs',
+    Guideline: 'guideline',
+    FAQ: 'faq',
 }

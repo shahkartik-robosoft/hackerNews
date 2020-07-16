@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Main from "../components/pages/HackerNewHome/Main";
 import Comments from "../components/pages/Comments";
+import Guidelines from "../components/pages/Guidelines/Guidelines";
 
 export interface IRoute {
     path: string;
@@ -38,6 +39,10 @@ const routes: Array<IRoute> = [
     {
         path: "/item",
         component: Comments,
+    },
+    {
+        path: "/guideline",
+        component: Guidelines,
     }
 ];
 

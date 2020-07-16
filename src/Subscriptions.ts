@@ -1,7 +1,7 @@
 import {PAGES} from "./constants";
 import apis from "./api/apiCalls";
 
-export const getSubscription = (page: string) => {
+export const getSubscription = (page: string, url: string = '') => {
     switch (page) {
         case PAGES.NEWS:
             return apis.fetchTopStories();
@@ -13,6 +13,9 @@ export const getSubscription = (page: string) => {
             return apis.fetchShowStories();
         case PAGES.ASK:
             return apis.fetchAskStories();
+        case PAGES.GUIDELINE:
+        case PAGES.FAQ:
+            return apis.getPageContent(url);
         default:
             return apis.fetchTopStories();
     }

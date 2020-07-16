@@ -1,16 +1,17 @@
 import {IHackerNewItem} from "./components/organisms/HackerNewItem/HackerNewItem";
 
-export const formatTime = (ms: number) => {
-    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
-    let min = Math.floor((ms / (1000 * 60)) % 60);
-    let sec = Math.floor((ms / 1000) % 60);
+export const formatTime = (unixTime: number) => {
+    const currentTime = Math.round((new Date()).getTime() / 1000);
+    const timeDifference = currentTime - unixTime;
+    const differenceDate = new Date(timeDifference * 1000);
+    const diffHours = differenceDate.getUTCHours();
+    const diffMinutes = differenceDate.getUTCMinutes();
+    const diffSeconds = differenceDate.getUTCSeconds();
 
-    if (hours < 24) {
-        return hours + " hrs ago";
-    } else if (min < 60) {
-        return min + " min ago";
-    } else if (sec < 60) {
-        return sec + " sec ago";
+    if (diffHours < 24) {
+        return `${diffHours} hours`;
+    } else if (diffHours > 24) {
+        return `${Math.floor( diffHours/ 24) } days`;
     }
 };
 
