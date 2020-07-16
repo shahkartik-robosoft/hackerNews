@@ -1,23 +1,26 @@
 import * as React from "react";
-import HackerNewItem, {IHackerNewItem} from "../../organisms/HackerNewItem/HackerNewItem";
-import {useEffect} from "react";
-import {formatData} from "../../../utils";
+import HackerNewItem from "../../organisms/HackerNewItem/HackerNewItem";
+import { MAX_ITEM_IN_A_PAGE } from "../../../constants";
 
-const Container: React.FC<any> = props => {
-    const [items, setItems] = React.useState(props.hackerNewItems);
-    useEffect(() => {
-        const data = props.hackerNewItems.map((item: any) => formatData(item));
-        setItems(data);
-    }, [props]);
+interface IContainer {
+    activeItems: Array<number>,
+    activePage: number,
+    page: string
+}
 
-    if(props.page === 'news') {
-        console.log('items  ', items);
-        return (
-            <HackerNewItem hackerNewItems={items} activePage ={props.activePage} />
-        )
-    } else {
-        return (<div />);
-    }
+const Container: React.FC<IContainer> = props => {
+    const startIndex = props.activePage === 0 ? 1 : 1 + (props.activePage-1) * MAX_ITEM_IN_A_PAGE;
+    return (
+        <React.Fragment>
+            {
+                props.activeItems.map((item: any, index: number) => (
+                    <React.Fragment key={index}>
+                        <HackerNewItem itemIndex={startIndex+index} itemId={item} page={props.page} />
+                    </React.Fragment>
+                ))
+            }
+        </React.Fragment>
+    )
 };
 
 export default Container;

@@ -4,9 +4,7 @@ import ItemDetails from "./ItemDetails";
 const ItemDetailsCosmos = () => {
     return (
         <div>
-            <ItemDetails noOfPoints={23} pointsBy="smith Jonas" hide={true} past={false} time="23 hours" noOfComments={35} />
-            <ItemDetails noOfPoints={23} pointsBy="smith Jonas" hide={false} past={true} time="23 hours" />
-            <ItemDetails noOfPoints={23} pointsBy="smith Jonas" hide={true} past={true} time="23 hours" />
+            <ItemDetails noOfPoints={23} pointsBy="smith Jonas" time="23 hours" hide={true} past={false} details={true} discuss={false} favourite={false} itemId={234235} showComments={true} noOfComments={35} />
         </div>
     )
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import New from "../components/pages/HackerNewHome/News";
+import Main from "../components/pages/HackerNewHome/Main";
+import Comments from "../components/pages/Comments";
 
 export interface IRoute {
     path: string;
@@ -12,12 +13,31 @@ const routes: Array<IRoute> = [
     {
         path: "/",
         exact: true,
-        component: New,
+        component: Main,
     },
     {
         path: "/news",
-        // exact: true,
-        component: New,
+        component: Main,
+    },
+    {
+        path: "/newest",
+        component: Main,
+    },
+    {
+        path: "/ask",
+        component: Main,
+    },
+    {
+        path: "/show",
+        component: Main,
+    },
+    {
+        path: "/jobs",
+        component: Main,
+    },
+    {
+        path: "/item",
+        component: Comments,
     }
 ];
 

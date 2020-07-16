@@ -1,0 +1,87 @@
+@import "../../../styles/colors";
+
+.btn-component {
+  cursor: pointer;
+  background-color: $comment-button-background;
+  border-color: $comment-button-border;
+  padding: 4px;
+  height: fit-content;
+  border-radius: 4px;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+.btn-component--AddCard {
+  color: #6b778c;
+  padding: 10px;
+}
+
+.btn-component--AddNewList {
+  background-color: hsla(0,0%,100%,.24);
+  color: #fff;
+  width: 15%;
+}
+
+.btn-component--AddAction {
+  background-color: #5aac44;
+  padding: 6px 12px;
+  width: fit-content;
+}
+
+
+.btn-component--taskCard {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  cursor: pointer;
+  z-index: 0;
+  margin: 4px;
+  width: 97%;
+  //width: -webkit-fill-available;
+  &:hover {
+    background-color: #f4f5f7;
+  }
+}
+
+.btn-component--green {
+  background-color: #519839;
+  margin: 3px;
+  padding: 5px 13px;
+}
+
+.btn-component--yellow {
+  background-color: #d9b51c;
+  margin: 3px;
+  padding: 5px 13px;
+}
+
+.btn-component--orange {
+  background-color: #cd8313;
+  margin: 3px;
+  padding: 5px 13px;
+}
+
+.btn-component--red {
+  background-color: #b04632;
+  margin: 3px;
+  padding: 5px 13px;
+}
+
+.btn-component--purple {
+  background-color: #89609e;
+  margin: 3px;
+  padding: 5px 13px;
+}
+
+.btn-component--blue {
+  background-color: #055a8c;
+  margin: 3px;
+  padding: 5px 13px;
+}
+
+.btn-component--gray {
+  background-color: rgba(9,30,66,.04);
+  margin: 3px;
+  padding: 5px 13px;
+}
+

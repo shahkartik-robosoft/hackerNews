@@ -11,7 +11,7 @@ export interface ITextProps {
 const Text: React.FC<ITextProps> = props => {
 
   return (
-      <p style={props.style} className={`${props.className}`}>{props.textLabel}</p>
+      <p style={props.style} onClick={props.onClick} className={`${props.className}`}>{props.textLabel}</p>
   );
 };
 

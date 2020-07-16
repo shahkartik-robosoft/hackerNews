@@ -3,7 +3,7 @@ import HeaderLogo from "../../molecules/Header/Header";
 import './Header.scss';
 import Navigation from "../../molecules/Navigation/Navigation";
 
-const navLinks: Array<string> = ["news", "past", "comments", "ask", "show", "jobs", "submit"];
+const navLinks: Array<string> = ["news", "comments", "ask", "show", "jobs"];
 
 const Header: React.FC = () => {
     return (

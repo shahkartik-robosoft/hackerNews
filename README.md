@@ -1,2 +1,2 @@
 # hackerNews
-Hacker News
+Hacker Main

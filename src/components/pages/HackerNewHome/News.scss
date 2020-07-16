@@ -1,4 +1,12 @@
+@import "../../../styles/colors";
+
 .news {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  a {
+    text-decoration: none;
+    color: $subtitle-font;
+    margin-left: 20px;
+  }
 }

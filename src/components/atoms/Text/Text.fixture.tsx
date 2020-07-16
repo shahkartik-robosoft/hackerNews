@@ -8,7 +8,7 @@ const TextCosmos = () => {
       <Text textLabel="past" className="text" />
       <Text textLabel="ask" className="text" />
       <Text textLabel="German court bans Tesla ad statements related to autonomous driving" className="text" />
-      <Text textLabel="Hacker News" className="text text_header" />
+      <Text textLabel="Hacker Main" className="text text_header" />
       <Text textLabel="points by Kartik" className="text_subtitle" />
       <Text textLabel="1." className="text_subtitle list" />
     </div>

@@ -15,13 +15,20 @@ export const formatTime = (ms: number) => {
 };
 
 export const formatData = (data :any) => {
-    const formatedData: IHackerNewItem = {
+    const formattedData: IHackerNewItem = {
         itemLabel: data.title,
         source: data.url ? data.url.split("/")[2] : '',
         noOfPoints: data.score,
         pointsBy: data.by,
         time: formatTime(data.time),
+        html: data.text && data.text,
+        kids: data.kids && data.kids,
         noOfComments: data.descendants
     }
-    return formatedData;
+    return formattedData;
 }
+
+export const getPageNo = ( urlSearch: string, query: string): number => {
+    const queryValue = Number(new URLSearchParams(urlSearch).get(query));
+    return queryValue ? queryValue : 1;
+};

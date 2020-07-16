@@ -7,6 +7,9 @@
   a {
     color: $default-font;
   }
+  a:active {
+    color: $active-link;
+  }
   &.navigate-footer {
     display: flex;
     justify-content: center;
