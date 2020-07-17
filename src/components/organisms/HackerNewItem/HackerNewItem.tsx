@@ -4,7 +4,15 @@ import ItemDetails from "../../molecules/ItemDetails/ItemDetails";
 import './HackerNewItem.scss';
 import apis from "../../../api/apiCalls";
 import {formatData} from "../../../utils";
-import {PAGES} from "../../../constants";
+import {
+    detailsPages,
+    discussPages,
+    favouritePages,
+    hidePages,
+    PAGES,
+    pastPages,
+    showCommentsPages
+} from "../../../constants";
 
 export interface IHackerNewItem {
     itemLabel: string,
@@ -36,12 +44,12 @@ const HackerNewItem: React.FC<IHackerNewItemProps> = props => {
             subscription.unsubscribe();
         };
     }, [props.itemId]);
-    const hide: boolean = props.page === PAGES.NEWS || props.page === PAGES.NEWEST || props.page === PAGES.COMMENTS ;
-    const past: boolean = props.page === PAGES.NEWEST || props.page === PAGES.COMMENTS;
-    const discuss: boolean = props.page === PAGES.NEWEST;
-    const showComments: boolean = props.page === PAGES.NEWS || props.page === PAGES.ASK || props.page === PAGES.SHOW || props.page === PAGES.COMMENTS;
-    const details: boolean = !(props.page === PAGES.JOBS);
-    const favourite: boolean = (props.page === PAGES.COMMENTS);
+    const hide: boolean = hidePages.includes(props.page as PAGES);
+    const past: boolean = pastPages.includes(props.page as PAGES);
+    const discuss: boolean = discussPages.includes(props.page as PAGES);
+    const showComments: boolean = showCommentsPages.includes(props.page as PAGES);
+    const details: boolean = detailsPages.includes(props.page as PAGES);
+    const favourite: boolean = favouritePages.includes(props.page as PAGES);
 
     return (
         <React.Fragment>

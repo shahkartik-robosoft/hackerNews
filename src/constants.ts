@@ -20,3 +20,10 @@ export const MAP_URL: any = {
     Guideline: 'guideline',
     FAQ: 'faq',
 }
+
+export const hidePages: Array<PAGES> = [ PAGES.NEWS, PAGES.NEWEST, PAGES.COMMENTS ];
+export const pastPages = [ PAGES.NEWEST, PAGES.COMMENTS ];
+export const discussPages = [ PAGES.NEWEST ];
+export const showCommentsPages = [ PAGES.NEWS, PAGES.ASK, PAGES.SHOW, PAGES.COMMENTS ];
+export const detailsPages = [ PAGES.NEWEST, PAGES.NEWS, PAGES.ASK, PAGES.SHOW, PAGES.COMMENTS ];
+export const favouritePages = [ PAGES.COMMENTS ];
