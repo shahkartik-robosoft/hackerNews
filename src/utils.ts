@@ -9,6 +9,9 @@ export const formatTime = (unixTime: number) => {
     const diffSeconds = differenceDate.getUTCSeconds();
 
     if (diffHours < 24) {
+        if (diffHours === 0) {
+            return `${diffMinutes} minute`;
+        }
         return `${diffHours} hours`;
     } else if (diffHours > 24) {
         return `${Math.floor( diffHours/ 24) } days`;
