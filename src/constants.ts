@@ -22,8 +22,8 @@ export const MAP_URL: any = {
 }
 
 export const hidePages: Array<PAGES> = [ PAGES.NEWS, PAGES.NEWEST, PAGES.COMMENTS ];
-export const pastPages = [ PAGES.NEWEST, PAGES.COMMENTS ];
-export const discussPages = [ PAGES.NEWEST ];
-export const showCommentsPages = [ PAGES.NEWS, PAGES.ASK, PAGES.SHOW, PAGES.COMMENTS ];
-export const detailsPages = [ PAGES.NEWEST, PAGES.NEWS, PAGES.ASK, PAGES.SHOW, PAGES.COMMENTS ];
-export const favouritePages = [ PAGES.COMMENTS ];
+export const pastPages: Array<PAGES> = [ PAGES.NEWEST, PAGES.COMMENTS ];
+export const discussPages: Array<PAGES> = [ PAGES.NEWEST ];
+export const showCommentsPages: Array<PAGES> = [ PAGES.NEWS, PAGES.ASK, PAGES.SHOW, PAGES.COMMENTS ];
+export const detailsPages: Array<PAGES> = [ PAGES.NEWEST, PAGES.NEWS, PAGES.ASK, PAGES.SHOW, PAGES.COMMENTS ];
+export const favouritePages: Array<PAGES> = [ PAGES.COMMENTS ];

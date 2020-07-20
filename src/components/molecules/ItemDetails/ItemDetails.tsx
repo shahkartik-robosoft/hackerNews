@@ -27,7 +27,7 @@ const ItemDetails: React.FC<IItemDetailsProps> = props => {
     return (
         <div className="itemDetails">
             {props.details && <Text textLabel={detail} className="text_subtitle" />}
-            <Text textLabel={`${props.time} `} className="text_subtitle" />
+            <Text textLabel={`${props.time} ago `} className="text_subtitle" />
             {props.hide && <Text textLabel=" | hide " className="text_subtitle" />}
             {props.past && <Text textLabel=" | past " className="text_subtitle" />}
             {props.favourite && <Text textLabel=" | favourite " className="text_subtitle" />}
