@@ -10,7 +10,7 @@
     "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
     "build": "babel-node ./node_modules/webpack/bin/webpack"
   },
-  "author": "Raj Shah <raj.shah@robosoftin.com>",
+  "author": "Kartik Shah <kartik.shah@robosoftin.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.10.2",
